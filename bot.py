@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO)
 from motor.motor_asyncio import AsyncIOMotorClient
 
 
-URI = "mongodb+srv://Chetancode:ankit090@cluster0.bjqkhqd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+URI = "mongodb+srv://anondb:ankit090@anondb.s9kqywa.mongodb.net/?retryWrites=true&w=majority&appName=anondb"
 # Establish a connection to the MongoDB server
 client = AsyncIOMotorClient(URI)
 
@@ -34,7 +34,7 @@ db = client['usernames_db']
 # Select the collection
 collection = db['usernames']
 
-admin_id = [6639559853,5871038439]
+admin_id = [6723228682,5871038439]
 
 channel_dictionary = {
     '-1002164668083' : "https://t.me/+wgkir0vG6C0zM2Y1"
@@ -42,7 +42,7 @@ channel_dictionary = {
 
 api_id = '22368708'  # Your api_id
 api_hash = 'ec241c37a122cda302d68cb1415d2bff'  # Your api_hash
-bot_token = '7398623122:AAHCC8bbGutcy4CuNrDhiCw1vvxoR6DrCLU'#'7032384318:AAFgxr2YFvDwp_WAiGQSkWodKfFJFs0Fk-0'  # Your bot's token
+bot_token = '6413901586:AAFVo3LOiiyz98GyuIxBQ2H8LikfTU4ZZ9Y'#'7032384318:AAFgxr2YFvDwp_WAiGQSkWodKfFJFs0Fk-0'  # Your bot's token
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 

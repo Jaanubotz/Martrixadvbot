@@ -82,7 +82,7 @@ success_text = "✅ Your recharge of {} has been successful"
 
 results = ['Big','Small']
 
-prediction_link = {'𝙏𝙞𝙧𝙖𝙣𝙜𝙖 𝙂𝙖𝙢𝙚𝙨' : "https://tirangaclub.net/#/register?invitationCode=15152485405"}
+prediction_link = {'𝙏𝙞𝙧𝙖𝙣𝙜𝙖 𝙂𝙖𝙢𝙚𝙨' : "https://diudream.com/#/register?invitationCode=3252569730"}
 
 games = list(prediction_link.keys())
 

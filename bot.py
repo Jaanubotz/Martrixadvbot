@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO)
 from motor.motor_asyncio import AsyncIOMotorClient
 
 
-URI = "mongodb+srv://anondb:ankit090@anondb.s9kqywa.mongodb.net/?retryWrites=true&w=majority&appName=anondb"
+URI = "mongodb+srv://Chetancode:ankit090@cluster0.bjqkhqd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 # Establish a connection to the MongoDB server
 client = AsyncIOMotorClient(URI)
 
@@ -34,19 +34,22 @@ db = client['usernames_db']
 # Select the collection
 collection = db['usernames']
 
-admin_id = [6723228682,5871038439]
+admin_id = [6639559853,5871038439]
 
 channel_dictionary = {
-    '-1002164668083' : "https://t.me/+wgkir0vG6C0zM2Y1"
+    '-1001997981310' : "https://t.me/ChetuP18",
+    '-1002058092597' : "https://t.me/TirangaAsliChetan",
+    '-1001990308626' : "https://t.me/AsliChetan_Prediction",
+    '-1002029214229' : "https://t.me/BDGASLI_PREDICTION"
 }
 
 api_id = '22368708'  # Your api_id
 api_hash = 'ec241c37a122cda302d68cb1415d2bff'  # Your api_hash
-bot_token = '6413901586:AAFVo3LOiiyz98GyuIxBQ2H8LikfTU4ZZ9Y'#'7032384318:AAFgxr2YFvDwp_WAiGQSkWodKfFJFs0Fk-0'  # Your bot's token
+bot_token = '7398623122:AAHCC8bbGutcy4CuNrDhiCw1vvxoR6DrCLU'#'7032384318:AAFgxr2YFvDwp_WAiGQSkWodKfFJFs0Fk-0'  # Your bot's token
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-image_join = "https://telegra.ph/file/8cd4ba473c43b3a67e90e.jpg"
+image_join = "https://telegra.ph/file/7d36a15ebfb442b3b43ab.jpg"
 
 code_img = "https://telegra.ph/file/12475f925e0f1f3cfa8de.jpg"
 
@@ -54,17 +57,25 @@ image_success = "https://telegra.ph/file/ac64992d7bc2b068bece7.jpg"
 recharging = {}
 predicting = {}
 
-game0 = "TIRANGA GAMES"
+game0 = "55 CLUB"
+game1 = "TIRANGA GAMES"
+game2 = "BDG"
 
 game_codes = {
-    game0:"####0"
+    game0:"####0",
+    game1:"####1",
+    game2:"####2"
 }
 
 
-game0_link = "https://diudream.com/#/register?invitationCode=3252569730"
+game0_link = "https://55club08.in/#/register?invitationCode=42613173458"
+game1_link = "https://tirangaclub.net/#/register?invitationCode=15152485405"
+game2_link = "https://bdg2222.com/#/register?invitationCode=u8BOw1609901"
 
-image_game = {"https://telegra.ph/file/8f140f16dbd65f3e1c560.jpg":game0_link
-}
+
+image_game = {"https://telegra.ph/file/31bccfcf79ce935f26acb.jpg":game0_link,
+              "https://telegra.ph/file/8f140f16dbd65f3e1c560.jpg":game1_link,
+              "https://telegra.ph/file/c661b7fded340c7705738.jpg":game2_link}
 
 image_photos = list(image_game.keys())
 
@@ -82,7 +93,9 @@ success_text = "✅ Your recharge of {} has been successful"
 
 results = ['Big','Small']
 
-prediction_link = {'𝙏𝙞𝙧𝙖𝙣𝙜𝙖 𝙂𝙖𝙢𝙚𝙨' : "https://diudream.com/#/register?invitationCode=3252569730"}
+prediction_link = {'55 𝘾𝙇𝙐𝘽' : "https://55club08.in/#/register?invitationCode=42613173458",
+                   '𝙏𝙞𝙧𝙖𝙣𝙜𝙖 𝙂𝙖𝙢𝙚𝙨' : "https://tirangaclub.net/#/register?invitationCode=15152485405",
+                   'ʙᴅɢ' : "https://bdg2222.com/#/register?invitationCode=u8BOw1609901"}
 
 games = list(prediction_link.keys())
 
@@ -90,9 +103,9 @@ result_text = '''✅Prediction Result:
 👨‍💻Period No: {}
 ⚡Result: {}
 
- Powered by 😈 : 𝙏𝙝𝙚 𝙅𝘼𝙎𝙎 𝙅𝙤𝙪𝙧𝙣𝙚𝙮'''
+ Powered by 😈 : 𝘾𝙝𝙚𝙩𝙖𝙣 𝙋18'''
 
-bot_username = "jasstiranga_bot"
+bot_username = "Matrix_ModBot"
 
 
 def get_random_result():
@@ -179,7 +192,7 @@ async def ask_for_task(client,message):
     ])
     await message.reply_text('''Hey 👋,
     
-    I am 𝙅𝘼𝙎𝙎 𝙅𝙤𝙪𝙧𝙣𝙚𝙮 BӨƬ 🤖
+    I am MΛƬЯIX MӨD BӨƬ 🤖
     
     If you register with my link I can give
     you free recharge and 80-90% accurate prediction.
@@ -276,7 +289,10 @@ async def free_recharge(client,callback_query):
     
     async def fuc(client,callback_query):
         keyboard0 = InlineKeyboardMarkup([
-                [InlineKeyboardButton(game0, callback_data=f"game_0")]
+                [InlineKeyboardButton(game0, callback_data=f"game_0"),
+                InlineKeyboardButton(game1,callback_data=f"game_1")],
+
+                [InlineKeyboardButton(game2, callback_data=f"game_2")]
             ])
         await callback_query.message.reply_text("In Which Game Do You Want Free Recharge ? .",reply_markup=keyboard0)
 
@@ -286,7 +302,7 @@ async def free_recharge(client,callback_query):
 async def prediction(client, callback_query):
     
     async def fuc(client,callback_query):
-        keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton(games[0], callback_data="predict_0")],[ InlineKeyboardButton("Back",callback_data="back")]])
+        keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton(games[0], callback_data="predict_0"),InlineKeyboardButton(games[1],callback_data="predict_1")],[InlineKeyboardButton(games[2], callback_data="predict_2")],[ InlineKeyboardButton("Back",callback_data="back")]])
     
         await callback_query.message.reply_text("ᴡʜɪᴄʜ ɢᴀᴍᴇ ᴘʀᴇᴅɪᴄᴛɪᴏɴ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ?",reply_markup=keyboard3)
 
